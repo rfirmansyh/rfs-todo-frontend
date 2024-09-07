@@ -1,3 +1,88 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto"
+      }
+    ] // Avoid conflict rule between Prettier and Airbnb Eslint
+  },
+  "overrides": [
+    // Configuration for TypeScript files
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "plugins": [
+        "@typescript-eslint",
+        "unused-imports",
+        "tailwindcss",
+        "simple-import-sort"
+      ],
+      "extends": [
+        "plugin:tailwindcss/recommended",
+        "next/core-web-vitals",
+        "plugin:prettier/recommended"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "prettier/prettier": "off", // Avoid conflict rule between Prettier
+        "react/jsx-indent": ["error", 2],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "arrow-body-style": ["error", "as-needed"],
+        "consistent-return": "error",
+        "indent": ["error", 2, { "SwitchCase": 1 }],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-console": ["error", { "allow": ["error"] }],
+        "object-curly-newline": [
+          "error",
+          {
+            "ImportDeclaration": { "multiline": true, "minProperties": 3 },
+            "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+          }
+        ],
+        "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
+        "react/require-default-props": "off", // Allow non-defined react props as undefined
+        "react/jsx-props-no-spreading": "off", // _app.tsx uses spread operator and also, react-hook-form
+        "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier
+        "@typescript-eslint/consistent-type-imports": "error", // Ensure `import type` is used when it's necessary
+        "@typescript-eslint/no-unused-vars": "off",
+        "import/extensions": "off", // Avoid missing file extension errors, TypeScript already provides a similar feature
+        "import/prefer-default-export": "off", // Named export is easier to refactor automatically
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              [
+                "^@/public",
+                "^react$",
+                "^next",
+                "^[a-z]",
+                "^@?\\w",
+                "^~",
+                "^",
+                "^\\.\\.(?!/?$)",
+                "^\\.\\./?$",
+                "^\\./(?=.*/)(?!/?$)",
+                "^\\.(?!/?$)",
+                "^\\./?$",
+                "^\\u0000"
+              ]
+            ]
+          }
+        ],
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "error",
+          { "argsIgnorePattern": "^_" }
+        ]
+      }
+    }
+  ]
 }

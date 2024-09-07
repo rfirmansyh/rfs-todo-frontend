@@ -1,0 +1,33 @@
+{
+  "common": {
+    "back": "Back",
+    "discard": "Discard",
+    "content": "Content",
+    "setting": "Settings",
+    "switchLang": "Switch Language",
+    "switchTheme": "Switch Theme"
+  },
+  "locales": {
+    "en": "English",
+    "id": "Indonesia"
+  },
+  "routes": {
+    "dashboard": {
+      "user": {
+        "page": "Dashboard",
+        "todos": {
+          "page": "Todo",
+          "all": { "page": "All Todo" },
+          "create": { "page": "Create Todo" },
+          "update": { "page": "Update Todo" },
+          "show": { "page": "Detail Todo" },
+          "delete": { "page": "Delete Todo" }
+        },
+        "setting": {
+          "users": { "page": "Users" },
+          "account": { "page": "Account" }
+        }
+      }
+    }
+  }
+}

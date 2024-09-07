@@ -1,0 +1,7 @@
+/* 
+  README: THIS FILE ONLY USED TO REPLICATE VALUES ON .env/.env.local/
+*/
+
+export const ENV_PUBLIC = {
+  NEXT_PUBLIC_APP_API_URL: process.env.NEXT_PUBLIC_APP_API_URL,
+};

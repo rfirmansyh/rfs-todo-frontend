@@ -1,0 +1,33 @@
+{
+  "common": {
+    "back": "Kembali",
+    "discard": "Buang Perubahan",
+    "content": "Konten",
+    "setting": "Pengaturan",
+    "switchLang": "Ganti Bahasa",
+    "switchTheme": "Ganti Tema"
+  },
+  "locales": {
+    "en": "English",
+    "id": "Indonesia"
+  },
+  "routes": {
+    "dashboard": {
+      "user": {
+        "page": "Dasbor",
+        "todos": {
+          "page": "Todo",
+          "all": { "page": "Semua Todo" },
+          "create": { "page": "Buat Todo" },
+          "update": { "page": "Ubah Todo" },
+          "show": { "page": "Lihat Todo" },
+          "delete": { "page": "Hapus Todo" }
+        },
+        "setting": {
+          "users": { "page": "Pengguna" },
+          "account": { "page": "Akun" }
+        }
+      }
+    }
+  }
+}
