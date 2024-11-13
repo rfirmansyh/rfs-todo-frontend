@@ -4,4 +4,5 @@
 
 export const ENV_PUBLIC = {
   NEXT_PUBLIC_APP_API_URL: process.env.NEXT_PUBLIC_APP_API_URL,
+  NEXT_PUBLIC_BUCKET_URL: process.env.NEXT_PUBLIC_BUCKET_URL,
 };
